@@ -79,7 +79,7 @@ async def self_check(first_reply: str, check_rules: str) -> str:
 
 async def stream_llm(messages: list[dict], temperature: float = 0.7, label: str = ""):
     """
-    流式调用 LLM，逐 chunk 打印，爸爸能看到整个过程。
+    流式调用 LLM，逐 chunk 打印，用户能看到整个过程。
     返回完整回复文本。
     """
     header = f"[{label}] " if label else ""
@@ -136,7 +136,7 @@ def print_banner(config: dict):
 
 
 def config_panel(config: dict):
-    """配置面板 —— 爸爸说的「选项框」"""
+    """配置面板 —— 用户说的「选项框」"""
     while True:
         print("\n┌── 配置面板 ──────────────────────┐")
         print("│  1. 思维链 (自定义思考步骤)       │")
