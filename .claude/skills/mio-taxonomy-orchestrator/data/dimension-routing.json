@@ -1,0 +1,33 @@
+{
+  "routing": {
+    "content_gap": {
+      "description": "配置维度缺失或写得不好 → 调 writer",
+      "target": "mio-taxonomy-writer",
+      "dimensions": ["行为策略", "交互风格", "思维方式", "用户画像", "推理模板", "反思提示词"]
+    },
+    "tool_gap": {
+      "description": "工具/Hook/MCP/技能配置缺失 → 调 tools-config",
+      "target": "mio-taxonomy-tools",
+      "dimensions": ["工具可用性", "技能触发规则", "校验回路"]
+    },
+    "error_diagnosis": {
+      "description": "发现重复的错误模式 → 查错误对照表",
+      "target": "D:\\Mio-SBAnger\\docs\\taxonomy\\data\\error-diagnosis.md"
+    },
+    "scenario_template": {
+      "description": "不确定某场景的配置方法 → 查该维度的场景模板",
+      "target": "D:\\Mio-SBAnger\\docs\\taxonomy\\dimensions\\",
+      "note": "每个维度文档第五节即场景模板，无需单独 workflow 文件"
+    },
+    "discovery": {
+      "description": "不确定某场景需要什么工具 → 动态搜索发现",
+      "target": "mio-taxonomy-discovery",
+      "note": "不维护静态工具清单，由 discovery 技能现场搜索评价"
+    }
+  },
+  "priority_order": {
+    "P0": ["行为策略(安全红线)", "校验回路(回环终止)", "工具可用性(权限+纪律)"],
+    "P1": ["用户画像", "技能触发规则"],
+    "P2": ["推理模板", "交互风格", "反思提示词", "思维方式"]
+  }
+}

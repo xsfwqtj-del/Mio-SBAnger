@@ -1,0 +1,59 @@
+{
+  "memory_to_dimension": {
+    "错误": {
+      "dimension": "行为策略",
+      "action": "每次出错 → 问：缺少什么规则可以防止这个错误？",
+      "priority": "P0"
+    },
+    "偏好": {
+      "dimension": "用户画像 / 交互风格",
+      "action": "用户表达的喜好 → 更新用户画像或交互风格",
+      "priority": "P1"
+    },
+    "决策": {
+      "dimension": "思维方式 / 推理模板",
+      "action": "每次选 A 不选 B → 这个偏好应该固化为思维原则吗？",
+      "priority": "P2"
+    },
+    "模式": {
+      "dimension": "校验回路",
+      "action": "连续出现 ≥3 次的规律 → 需要自动化验证",
+      "priority": "P0"
+    },
+    "排除": {
+      "dimension": "行为策略 / 出厂默认",
+      "action": "明确不做的方案 → 写入行为策略边界或出厂默认",
+      "priority": "P1"
+    },
+    "不变量": {
+      "dimension": "用户画像 / 出厂默认",
+      "action": "确认后不变的事实 → 固化为出厂默认值",
+      "priority": "P2"
+    },
+    "讨论": {
+      "dimension": "思维方式 / 推理模板",
+      "action": "多次往返 + 结论 → 提炼为思维原则或输出模板",
+      "priority": "P2"
+    },
+    "问题": {
+      "dimension": "校验回路 / 工具可用性",
+      "action": "发现的待修项 → 需要新的检查规则吗？",
+      "priority": "P1"
+    },
+    "知识": {
+      "dimension": "用户画像",
+      "action": "外部查到的信息 → 对 Agent 行为有影响的写入画像",
+      "priority": "P2"
+    },
+    "配置": {
+      "dimension": "工具可用性 / 技能触发规则",
+      "action": "settings/hooks/skills 的修改 → 直接映射",
+      "priority": "P0"
+    },
+    "使用": {
+      "dimension": "工具可用性 / 行为策略",
+      "action": "CC 操作踩坑 → 写入工具纪律或行为策略",
+      "priority": "P1"
+    }
+  }
+}
